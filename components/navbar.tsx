@@ -48,14 +48,15 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-sm">
-      <div className="mx-auto flex w-full max-w-layout items-center justify-between px-5 py-2 sm:px-8 lg:px-10">
+      <div className="mx-auto flex w-full max-w-layout items-center justify-between px-4 py-1.5 sm:px-8 sm:py-2 lg:px-10">
         <Link href="/" className="flex items-center gap-3" aria-label="Aegis Communication home">
           <Image
             src="/aegis-logo.png"
             alt="Aegis Communication logo"
             width={168}
             height={64}
-            sizes="(max-width: 640px) 138px, 168px"
+            sizes="(max-width: 640px) 108px, 168px"
+            className="w-[108px] sm:w-[140px] lg:w-[168px]"
             style={{ width: "auto", height: "auto" }}
             priority
           />
