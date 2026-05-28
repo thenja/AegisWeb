@@ -225,7 +225,7 @@ export function ContactForm() {
       </label>
       <button
         type="submit"
-        className="btn-primary"
+        className="btn-primary w-full sm:w-auto"
       >
         Submit Enquiry
       </button>

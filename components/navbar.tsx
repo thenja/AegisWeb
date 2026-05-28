@@ -146,7 +146,7 @@ export function Navbar() {
         </nav>
         <button
           type="button"
-          className="rounded-md border border-slate-300 p-2 text-slate-800 lg:hidden"
+          className="rounded-md border border-slate-300 p-2.5 text-slate-800 lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -160,7 +160,7 @@ export function Navbar() {
       {open ? (
         <nav
           id="mobile-menu"
-          className="max-h-[74vh] overflow-y-auto border-t border-slate-200 bg-white px-5 py-4 lg:hidden"
+          className="max-h-[74vh] overflow-y-auto border-t border-slate-200 bg-white px-4 py-3 lg:hidden"
           aria-label="Mobile"
         >
           <ul className="space-y-2">
@@ -227,7 +227,7 @@ export function Navbar() {
                   <Link
                     href={item.href}
                     aria-current={active ? "page" : undefined}
-                    className={`block rounded-md px-2 py-2 text-sm ${
+                    className={`block rounded-md px-2 py-2.5 text-sm ${
                       active ? "bg-brand-50 font-semibold text-accent-blue" : "text-slate-700 hover:bg-slate-50"
                     }`}
                   >

@@ -21,7 +21,7 @@ export function CtaBanner({
   if (variant === "premium") {
     return (
       <SectionWrapper className={sectionClassName}>
-        <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white px-6 py-6 shadow-panel sm:px-8 sm:py-8">
+        <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white px-5 py-5 shadow-panel sm:px-8 sm:py-8">
           <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white via-brand-50/45 to-blue-50/55" />
           <div
             aria-hidden="true"
@@ -33,12 +33,12 @@ export function CtaBanner({
           />
           <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-35 [background-image:linear-gradient(100deg,rgba(16,52,79,0.045)_1px,transparent_1px)] [background-size:32px_32px]" />
 
-          <div className="relative z-10 grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
+          <div className="relative z-10 grid gap-4 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
-              <h2 className="text-2xl font-semibold text-accent-deep sm:text-3xl">{title}</h2>
+              <h2 className="text-[1.65rem] font-semibold text-accent-deep sm:text-3xl">{title}</h2>
               <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-700 sm:text-base">{description}</p>
             </div>
-            <Link href={ctaHref} className="btn-primary">
+            <Link href={ctaHref} className="btn-primary w-full sm:w-auto">
               {ctaLabel}
             </Link>
           </div>
@@ -49,13 +49,13 @@ export function CtaBanner({
 
   return (
     <SectionWrapper className={sectionClassName}>
-      <div className="surface-panel p-8 sm:p-10">
-        <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
+      <div className="surface-panel p-6 sm:p-10">
+        <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
-            <h2 className="text-2xl font-semibold text-accent-deep sm:text-3xl">{title}</h2>
+            <h2 className="text-[1.65rem] font-semibold text-accent-deep sm:text-3xl">{title}</h2>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-700 sm:text-base">{description}</p>
           </div>
-          <Link href={ctaHref} className="btn-primary">
+          <Link href={ctaHref} className="btn-primary w-full sm:w-auto">
             {ctaLabel}
           </Link>
         </div>

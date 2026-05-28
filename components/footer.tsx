@@ -5,9 +5,9 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-12 border-t border-slate-200 bg-white text-slate-800">
+    <footer className="mt-8 border-t border-slate-200 bg-white text-slate-800 sm:mt-10">
       <div className="h-1 w-full bg-gradient-to-r from-brand-500 via-brand-700 to-accent-blue" aria-hidden="true" />
-      <div className="mx-auto grid w-full max-w-layout gap-10 px-6 py-12 sm:px-8 lg:grid-cols-3 lg:px-10">
+      <div className="mx-auto grid w-full max-w-layout gap-7 px-4 py-8 sm:px-6 sm:py-10 lg:grid-cols-3 lg:gap-10 lg:px-10 lg:py-12">
         <section aria-labelledby="footer-contact">
           <h2 id="footer-contact" className="text-lg font-semibold">
             Contact
@@ -68,8 +68,8 @@ export function Footer() {
           </p>
         </section>
       </div>
-      <div className="border-t border-slate-200 px-6 py-4 text-center text-xs text-slate-600 sm:px-8 lg:px-10">
-        <p>? {year} AEGIS COMMUNICATION SDN BHD. All rights reserved.</p>
+      <div className="border-t border-slate-200 px-4 py-4 text-center text-xs text-slate-600 sm:px-6 lg:px-10">
+        <p>(c) {year} AEGIS COMMUNICATION SDN BHD. All rights reserved.</p>
       </div>
     </footer>
   );

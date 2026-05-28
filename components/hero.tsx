@@ -25,7 +25,7 @@ export function Hero({
 }: HeroProps) {
   return (
     <SectionWrapper className="!pt-2 !pb-2 sm:!pt-3 sm:!pb-3 lg:!pt-4 lg:!pb-4">
-      <div className="relative overflow-hidden rounded-3xl border border-slate-200/90 bg-white p-5 shadow-panel sm:p-7 lg:p-8">
+      <div className="relative overflow-hidden rounded-3xl border border-slate-200/90 bg-white p-3 shadow-panel sm:p-6 lg:p-8">
         {backgroundTextureSrc ? (
           <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-30">
             <Image src={backgroundTextureSrc} alt="" fill sizes="(max-width: 1280px) 100vw, 1200px" quality={72} className="object-cover" priority />
@@ -42,29 +42,42 @@ export function Hero({
         />
         <div aria-hidden="true" className="pointer-events-none absolute bottom-0 left-0 h-24 w-full bg-gradient-to-r from-brand-500/14 via-accent-blue/10 to-transparent" />
 
-        <div className="relative z-10 grid gap-4 lg:grid-cols-[1fr_0.48fr] lg:items-stretch">
+        <div className="relative z-10 grid gap-2 lg:grid-cols-[1fr_0.48fr] lg:items-stretch">
           <div>
             {eyebrow ? (
-              <p className="motion-enter mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-brand-700 sm:text-sm">{eyebrow}</p>
+              <p className="motion-enter mb-1 text-[10px] font-semibold uppercase tracking-[0.11em] text-brand-700 sm:text-sm">{eyebrow}</p>
             ) : null}
-            <h1 className="motion-enter motion-delay-1 max-w-3xl text-3xl font-semibold tracking-tight text-accent-deep sm:text-5xl">{title}</h1>
-            <p className="motion-enter motion-delay-2 mt-3 max-w-2xl text-base leading-relaxed text-slate-700 sm:text-lg">{description}</p>
+            <h1 className="motion-enter motion-delay-1 max-w-3xl text-[1.95rem] font-semibold leading-[1.06] tracking-tight text-accent-deep sm:text-[2.75rem] lg:text-5xl">{title}</h1>
+            <p className="motion-enter motion-delay-2 mt-2 max-w-2xl text-[1rem] leading-relaxed text-slate-700 sm:text-[1.06rem] lg:text-lg">{description}</p>
             {(primaryCta || secondaryCta) && (
-              <div className="motion-enter motion-delay-3 mt-5 flex flex-wrap gap-3">
+              <div className="motion-enter motion-delay-3 mt-3 grid grid-cols-2 gap-2 sm:mt-4 sm:flex sm:flex-wrap sm:gap-3">
                 {primaryCta ? (
-                  <Link href={primaryCta.href} className="btn-primary">
+                  <Link href={primaryCta.href} className="btn-primary w-full text-center sm:w-auto">
                     {primaryCta.label}
                   </Link>
                 ) : null}
                 {secondaryCta ? (
-                  <Link href={secondaryCta.href} className="btn-secondary">
+                  <Link href={secondaryCta.href} className="btn-secondary w-full text-center sm:w-auto">
                     {secondaryCta.label}
                   </Link>
                 ) : null}
               </div>
             )}
+            {highlights?.length ? (
+              <div className="mt-2.5 sm:hidden">
+                <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.09em] text-brand-700">Strategic Focus</p>
+                <ul className="grid gap-1 text-[0.88rem] leading-snug text-slate-700">
+                  {highlights.slice(0, 3).map((item) => (
+                    <li key={item} className="flex items-start gap-1.5 rounded-md bg-slate-50/85 px-2.5 py-1.5">
+                      <span aria-hidden="true" className="mt-1.5 h-1.5 w-1.5 rounded-full bg-gradient-to-br from-brand-500/90 to-accent-blue/90" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
           </div>
-          <aside aria-label="Key advisory strengths" className="motion-enter motion-delay-2 relative min-h-[220px] overflow-hidden rounded-2xl border border-brand-100 bg-white/88 sm:min-h-[280px]">
+          <aside aria-label="Key advisory strengths" className="motion-enter motion-delay-2 relative hidden min-h-[220px] overflow-hidden rounded-2xl border border-brand-100 bg-white/88 sm:block sm:min-h-[280px]">
             {visualSrc ? (
               <div aria-hidden="true" className="hero-visual-drift pointer-events-none absolute inset-0 opacity-[0.68]">
                 <Image

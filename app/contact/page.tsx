@@ -58,7 +58,7 @@ export default function ContactPage() {
               <div className="surface-panel overflow-hidden p-0">
                 <h2 className="px-6 pt-6 text-xl font-semibold text-accent-deep">Location Map</h2>
                 <p className="px-6 pt-2 text-sm text-slate-700">Google Maps embed placeholder for Union Tower, Taman Desa.</p>
-                <div className="mt-4 h-72 w-full bg-slate-100">
+                <div className="mt-4 h-56 w-full bg-slate-100 sm:h-64 lg:h-72">
                   <iframe
                     title="Union Tower, Taman Desa map placeholder"
                     src="https://maps.google.com/maps?q=Union%20Tower%2C%20Taman%20Desa%2C%20Kuala%20Lumpur&t=&z=13&ie=UTF8&iwloc=&output=embed"

@@ -16,9 +16,9 @@ export function PageHeader({ title, intro }: PageHeaderProps) {
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 opacity-35 [background-image:linear-gradient(rgba(16,52,79,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(16,52,79,0.045)_1px,transparent_1px)] [background-size:44px_44px]"
           />
-          <div className="relative p-6 sm:p-8">
-            <h1 className="text-3xl font-semibold tracking-tight text-accent-deep sm:text-5xl">{title}</h1>
-            <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate-700 sm:text-lg">{intro}</p>
+          <div className="relative p-5 sm:p-6 lg:p-8">
+            <h1 className="text-[2rem] font-semibold tracking-tight text-accent-deep sm:text-[2.6rem] lg:text-5xl">{title}</h1>
+            <p className="mt-3 max-w-3xl text-[1rem] leading-relaxed text-slate-700 sm:text-[1.06rem] lg:text-lg">{intro}</p>
           </div>
         </header>
       </InViewReveal>

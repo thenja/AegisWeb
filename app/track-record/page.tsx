@@ -20,7 +20,7 @@ export default function TrackRecordPage() {
 
       <SectionWrapper className="!py-2 sm:!py-3 lg:!py-4">
         <InViewReveal>
-          <section aria-labelledby="mandates-heading" className="surface-panel bg-brand-50/45 p-8">
+          <section aria-labelledby="mandates-heading" className="surface-panel bg-brand-50/45 p-5 sm:p-6 lg:p-8">
             <h2 id="mandates-heading" className="text-2xl font-semibold text-accent-deep">
               Mandate Types
             </h2>
@@ -61,7 +61,7 @@ export default function TrackRecordPage() {
 
       <SectionWrapper className="!py-2 sm:!py-3 lg:!py-4">
         <InViewReveal>
-          <section aria-labelledby="selected-experience-heading" className="surface-panel p-8">
+          <section aria-labelledby="selected-experience-heading" className="surface-panel p-5 sm:p-6 lg:p-8">
             <h2 id="selected-experience-heading" className="text-2xl font-semibold text-accent-deep">
               Selected Experience
             </h2>
